@@ -1,11 +1,12 @@
 package guru.springframework.spring5webapp.bootstrap;
 
 import guru.springframework.spring5webapp.domain.Author;
-import guru.springframework.spring5webapp.domain.Book;
 import guru.springframework.spring5webapp.repositories.AuthorRepository;
 import guru.springframework.spring5webapp.repositories.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import guru.springframework.spring5webapp.domain.Book;
 
 /**
  * Created by jt on 12/23/19.
@@ -21,6 +22,7 @@ public class BootStrapData implements CommandLineRunner {
         this.bookRepository = bookRepository;
     }
 
+    // add the data to in-memory DB (H2). Next method push few entities to the DB.
     @Override
     public void run(String... args) throws Exception {
 

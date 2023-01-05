@@ -17,6 +17,7 @@ public class Book {
     private String title;
     private String isbn;
 
+    // GZ comment: one book can be written by few authors (so why it is ManyToMany relation). 
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id"))
